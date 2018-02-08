@@ -6,6 +6,11 @@ A utility for rating the complexity of the password
 
 for launch need python 3
 
+copy password_blacklist.py and password_strength.py
+in same directory
+
+file password_blacklist.py consists of a list of "bad" passwords, you can add it
+
 Example of script launch on windows, Python 3.6:
 
 ```
@@ -29,4 +34,3 @@ Input password and receive password complexity rating.
 # Project Goals
 
 The code is written for educational purposes. Training course for web-developers - [DEVMAN.org](https://devman.org)
-
