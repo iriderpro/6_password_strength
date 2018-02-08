@@ -6,10 +6,7 @@ A utility for rating the complexity of the password
 
 for launch need python 3
 
-copy password_blacklist.py and password_strength.py
-in same directory
-
-file password_blacklist.py consists of a list of "bad" passwords, you can add it
+script consists of a list of "bad" passwords, you can add it
 
 Example of script launch on windows, Python 3.6:
 
