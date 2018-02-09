@@ -33,29 +33,31 @@ list_bad_password = [
 
 
 def password_check(password):
-    length_error = len(password) < 8
-    digit_error = re.search(r"\d.", password) is None
-    uppercase_error = re.search(r"[A-Z]", password) is None
-    lowercase_error = re.search(r"[a-z]", password) is None
-    symbol_error = re.search(
+    length_check = len(password) < 8
+    digit_check = re.search(r"\d.", password) is None
+    uppercase_check = re.search(r"[A-Z]", password) is None
+    lowercase_check = re.search(r"[a-z]", password) is None
+    symbol_check = re.search(
         r"[ !@#$%&'()*+,-./[\\\]^_`{|}~" + r'"]',
         password,
     ) is None
-    date_error = re.search(r"\d{6,}", password) is not None
+    date_number_check = re.search(r"\d{6,}", password) is not None
     if password in list_bad_password:
         score = 0
     else:
-        score = 4
+        if length_check is True:
+            score = 0
+        else:
+            score = 5
 
-    for item in (
-        length_error,
-        digit_error,
-        uppercase_error,
-        lowercase_error,
-        symbol_error,
-        date_error,
+    for check in (
+        digit_check,
+        uppercase_check,
+        lowercase_check,
+        symbol_check,
+        date_number_check,
     ):
-        if item is False:
+        if check is False:
             score += 1
     return score
 
