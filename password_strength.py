@@ -29,7 +29,6 @@ def password_check(password):
         date_number_check])
     score2 = 5 - score2
     score = score1 + score2
-    print(score)
     return score
 
 
